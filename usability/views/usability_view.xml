@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="view_user_form1" model="ir.ui.view">
+            <field name="name">User super admin</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='oe_right oe_button_box']" position="inside">
+                    <button class="oe_inline oe_stat_button" name="apply_allgroups" string="Super Admin" type="object" icon="fa-cogs"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
