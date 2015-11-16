@@ -23,15 +23,15 @@
 #
 ##############################################################################
 
-from openerp.osv import osv
+from openerp import models, fields, api, exceptions, _
 
-class res_users(osv.osv):
+class res_users(models.TransientModel):
     _inherit = "res.users"
 
-    def apply_allgroups(self, cr, uid, ids, context=None):
-        grp_ids = self.pool.get('res.groups').search(cr, uid, [], context=context)
-        for userid in self.browse(cr, uid, ids):
-            userid.write({'groups_id': [(6, 0, grp_ids)]})
+    @api.multi
+    def apply_allgroups(self):
+        grp_ids = self.env['res.groups'].search([])
+        self.write({'groups_id': [(6, 0, grp_ids.ids)]})
 
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
