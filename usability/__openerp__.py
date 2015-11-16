@@ -31,7 +31,7 @@
     "category": "User Access",
     "website": "http://www.medma.net",
     "description": """Apply all Groups to any user on Single click of button in users form view. This Module can be very useful for Developers who usually need to give all access to any user many times when developing something.""",
-    "summary": "Apply All Groups to any user on single click",
+    "summary": "Apply all groups to any user on single click and give access of Super User",
     "license": "AGPL-3",
     "depends": ["base"],
     "data": [
@@ -39,7 +39,6 @@
     ],
     "installable": True,
     "auto_install": False,
-    "active": True
 }
 
 
