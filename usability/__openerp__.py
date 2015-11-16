@@ -37,6 +37,9 @@
     "data": [
         'views/usability_view.xml',
     ],
+    'images': [
+        'static/description/icon.png',
+    ],
     "installable": True,
     "auto_install": False,
 }
