@@ -38,7 +38,7 @@
         'views/usability_view.xml',
     ],
     'images': [
-        'static/description/icon.png',
+        'static/description/banner.png',
     ],
     "installable": True,
     "auto_install": False,
